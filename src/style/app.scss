@@ -1,0 +1,101 @@
+@import "../_bootstrap/_bootstrap";
+.row{
+  margin: 0;
+}
+
+body{
+  
+}
+
+.filter__dropdown{
+  width: 100%;
+  min-width: 150px;
+  max-width: 500px;
+}
+
+.square__filter{
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+}
+
+.checkbox{
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+}
+
+.checkbox__input{
+  &:hover{
+    cursor: pointer;
+  }
+  width: 100%;
+  height: 100%;
+  border: none;
+  opacity: 0;
+}
+
+.checkbox__box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+}
+
+.entrance{
+  width: 100%;
+  max-width: 200px;
+}
+
+.apparts{
+  color: #ffff;
+  span{
+    width: 30px;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+
+}
+.not-available{
+  background-color: grey;
+}
+
+.free{
+  background-color: rgb(38, 253, 70);
+  color: white;
+}
+
+.booked{
+  background-color: rgb(255, 174, 0);
+}
+
+.sold{
+  background-color: rgb(0, 72, 255);
+}
+
+.disabled {
+  opacity: 0.4;
+  cursor: auto;
+}
+
+.color{
+  width: 25px;
+  height: 25px;
+}
+
+.checkbox__input:checked + .checkbox__box{
+  width: 100%;
+  height: 100%;
+  background-color: #0dcaf0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
